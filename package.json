@@ -1,0 +1,26 @@
+{
+  "name": "evm-ui-cli",
+  "version": "0.1.0",
+  "description": "CLI tool for creating new EVM UI projects",
+  "main": "bin/cli.js",
+  "bin": {
+    "evm-ui": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "evm",
+    "ui",
+    "cli",
+    "template"
+  ],
+  "author": "zeJabun",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "evm-ui": "^0.3.0"
+  }
+} 

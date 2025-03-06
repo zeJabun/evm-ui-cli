@@ -28,12 +28,8 @@ async function init() {
     // Get the current working directory
     const targetDir = process.cwd();
     
-    // Get project name from command line argument or prompt
-    let projectName = process.argv[2];
-    if (!projectName) {
-      projectName = await question('What is your project name? ');
-    }
-    
+    // Ask for project name
+    const projectName = await question('What is your project name? ');
     if (!projectName) {
       console.error('Error: Project name is required');
       process.exit(1);
@@ -50,7 +46,7 @@ async function init() {
     // Change to project directory
     process.chdir(projectDir);
     
-    console.log(`Creating new EVM UI project: ${projectName}...`);
+    console.log('Initializing EVM UI project...');
 
     // Clone the repository
     await execAsync('git clone https://github.com/zeJabun/evm-ui.git .');
